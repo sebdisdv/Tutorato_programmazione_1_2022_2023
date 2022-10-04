@@ -1,7 +1,7 @@
 /* Prodotto matriciale:
  - Input dimensione r1 e c1; input r2 c2.
  - Allocazione dinamica delle due matrici.
- - Inizializzazione con interi random tra -2 e +6 (float)
+ - Inizializzazione con interi random tra -2 e +6.
  - Calcolo prodotto matriciale tra le due (con controllo sulle dimensioni subito dopo l'input).
  - Stampa prodotto.
 */
