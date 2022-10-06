@@ -5,7 +5,7 @@ using namespace std;
 float** alloc_matrix(const int row, const int col){
     float** matrix;
     matrix = new float*[row];
-    for(int i = 0; i < col; i++){
+    for(int i = 0; i < row; i++){
         matrix[i] = new float[col];
     }
     return matrix;
@@ -31,9 +31,9 @@ void print_matrix(float** m, const int row, const int col){
 
 void dealloc_matrix(float** m,const int row){
     for(int i = 0; i < row; i++){
-        delete m[i];
+        delete[] m[i];
     }
-    delete m;
+    delete[] m;
 }
 
 void swap_vars(float& n1, float& n2){
