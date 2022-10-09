@@ -1,14 +1,4 @@
-/**
- * @file es4.cc
- * @author Chiara
- * @brief Dato in input un numero n dall'utente, in maniera ricorsiva chiedere all'utente di inserire una lettera per n volte 
- * e, sapendo che le lettere in maiuscolo valgono 10 mentre quelle in minuscolo valgono 5, calcolare e stampare a video la somma totale.
- * @version 0.1
- * @date 2022-10-07
- * 
- * @copyright Copyright (c) 2022
- * 
- */
+
 
 #include <iostream>
 #include <cctype>
