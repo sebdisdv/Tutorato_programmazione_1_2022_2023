@@ -20,7 +20,7 @@ Scrivere un programma che dati in ingresso due numeri interi positivi `n1` `n2` 
 
 ## Esercizio 4
 Dato in input un numero n dall'utente, in maniera ricorsiva chiedere all'utente di inserire una lettera per n volte e, sapendo che le lettere in maiuscolo valgono 10 mentre quelle in minuscolo valgono 5, calcolare e stampare a video la somma totale.
- - è possibile usare la funzione `islower(char)` contenuta nella libreria `cctype` per controllare se il carattere in input è in minuscolo
+ - è possibile usare la funzione `islower(char)` contenuta nella libreria `cctype` per controllare che il carattere in input sia minuscolo
 
 ## Esercizio 5
 Creare una funzione che ricevuto un numero restituisce la somma delle cifre del numero 
