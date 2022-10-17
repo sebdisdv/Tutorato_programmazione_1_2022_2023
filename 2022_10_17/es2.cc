@@ -4,7 +4,10 @@ using namespace std;
 
 int fibonacci(int n){
     int val;
-    if (n == 0 || n == 1){
+    if (n == 0) {
+        val = 0;
+    }
+    else if (n == 1){
         val = 1;
     } else {
         val = fibonacci(n - 1) + fibonacci(n - 2);

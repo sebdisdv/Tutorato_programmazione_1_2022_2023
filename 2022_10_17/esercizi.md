@@ -7,7 +7,7 @@ Scrivere una funzione ricorsiva `mcd` che prenda in ingresso due variabili di ti
 ## Esercizio 2
 
 Scrivere un programma che dato in ingresso un numero intero positivo `n` stampi a video i primi 
-`n` numeri della sequenza di fibonacci (1 1 2 3 5 8 13 21 34 55 ....).
+`n` numeri della sequenza di fibonacci (0 1 1 2 3 5 8 13 21 34 55 ....).
  - la sequenza dovrà essere calcolata in modo ricorsivo
 
 ## Esercizio 3 (esercizio per la lode di un appello)
