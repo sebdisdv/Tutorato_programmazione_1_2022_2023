@@ -16,7 +16,7 @@
 5 3 4 2   => [2, 2]
 6 4 7 5
 ```
-
+- Scrivere un programma che calcoli il prodotto tra due matrici quadrate inizializzate randomicamente con valori tra `[0, 10]` e lo stampi a video
 ## Esercizio 1
 
 Scrivere un programma che permetta all'utente attraverso un piccolo menù che prende in ingresso un carattere, di eseguire tutte le operazioni necessarie per ridurre una matrice.
