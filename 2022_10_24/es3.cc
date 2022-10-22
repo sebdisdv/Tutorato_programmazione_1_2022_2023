@@ -1,81 +1,91 @@
 #include <iostream>
-
 using namespace std;
 
-const int N = 3;
-const int M = 3;
+#define MAX 99
+#define MIN 0
+#define MAX_LENGTH 20
 
-
-void riempiMatrice(int matrix[][M]){
-    for (int i = 0; i < N; i++)
-    {
-        for (int j = 0; j < M; j++)
-        {
-            matrix[i][j] = rand() % 100 +1;
-        }
-    }
-}
-
-void bubbleSort(int arr[], int n)
+void merge(int vec[], int l, int m, int r)
 {
-    int i, j;
-    for (i = 0; i < n - 1; i++)
-        for (j = 0; j < n - i - 1; j++)
-            if (arr[j] > arr[j + 1])
-                swap(arr[j], arr[j + 1]);
-}
-
-
-float calcolaMedia(int arr[], int n){
-    int somma = 0;
-    for (int i = 0; i < n; i++)
-    {
-        somma += arr[i];
-    }
-    return somma/n;
+    int i, j, k;
+    int n1 = m - l + 1;
+    int n2 = r - m;
+ 
+   
+    int left[n1], right[n2];
+ 
     
-}
-
-void bubbleSortByAvg(int arr[][M], int n, int m){
-    int i, j;
-    for (i = 0; i < n - 1; i++)
-        for (j = 0; j < n - i - 1; j++)
-            if (calcolaMedia(arr[j], m) > calcolaMedia(arr[j + 1], m))
-                swap(arr[j], arr[j + 1]);
-}
-
-
-void stampaArray(int arr[][M]){
-    for (int i = 0; i < N; i++)
-    {
-        for (int j = 0; j < M; j++)
-        {
-            cout << arr[i][j] << "\t";
+    for (int it = 0; it < n1; it++){
+        left[it] = vec[l + it];
+    }
+    for (int it = 0; it < n2; it++){
+        right[it] = vec[m + 1 + it];
+    }
+ 
+  
+    i = 0; 
+    j = 0; 
+    k = l;
+     
+    while (i < n1 && j < n2) {
+        if (left[i] <= right[j]) {
+            vec[k] = left[i];
+            i++;
         }
-        cout << "Media: " << calcolaMedia(arr[i], M);
-        cout << endl;
+        else {
+            vec[k] = right[j];
+            j++;
+        }
+        k++;
+    }
+ 
+    while (i < n1) {
+        vec[k] = left[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        vec[k] = right[j];
+        j++;
+        k++;
+    }
+}
+
+void merge_sort_rec(int arr[], int l, int r)
+{
+    if (l < r) {
+        int mid = l + (r - l) / 2; // equal to (r + l) / 2
+ 
+        merge_sort_rec(arr, l, mid);
+        merge_sort_rec(arr, mid + 1, r);
+ 
+        merge(arr, l, mid, r);
+    }
+}
+ 
+void merge_sort(int vec[], int length){
+    merge_sort_rec(vec, 0, length - 1);
+}
+
+void init_vec(int v[], int length){
+    for(int i = 0; i < length; i++){
+        v[i] = rand() % (MAX - MIN + 1) + MIN;
+    }
+}
+
+void print_vec(int v[], int length){
+    for(int i = 0; i < length; i++){
+        cout << v[i] << " ";
     }
     cout << endl;
 }
 
 int main(){
     srand(time(NULL));
-    
-    int matrix[N][M];
-    riempiMatrice(matrix);
-    cout << "Matrice appena generata" << endl;
-    stampaArray(matrix);
-
-    for (int i = 0; i < N; i++)
-    {
-        bubbleSort(matrix[i], M);
-    }
-    cout << "Bubble sort su ogni riga" << endl;
-    stampaArray(matrix);
-
-    bubbleSortByAvg(matrix, N, M);
-    cout << "Matrice ordinata" << endl;
-    stampaArray(matrix);
-    
-    return 0;
+    int v[MAX_LENGTH];
+    init_vec(v, MAX_LENGTH);
+    print_vec(v, MAX_LENGTH);
+    merge_sort(v, MAX_LENGTH);
+    print_vec(v, MAX_LENGTH);
 }

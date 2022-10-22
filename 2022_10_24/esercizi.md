@@ -44,12 +44,6 @@ Scrivere un programma che permetta all'utente attraverso un piccolo menù che pr
 - vi potrebbe tornare utile una delle implementazioni del Massimo Comun Divisore dai laboratori precedenti
 
 ## Esercizio 2
-Implementare l'algoritmo di ordinamento `merge_sort`
-
-Esempio di funzionamento
-![Alt text](mergesort_pic.jpg)
-
-## Esercizio 3
 
 Scrivere un programma che data una matrice, utilizzi l'algoritmo "*BubbleSort*" per ordinare im numeri all'interno di ogni riga e le righe per valore medio.
    - Generare la matrice con numeri random da 1 a 100
@@ -75,3 +69,9 @@ Matrice ordinata
 5       82      99      Media: 62
 53      65      79      Media: 65
 ```
+
+## Esercizio 3
+Implementare l'algoritmo di ordinamento `merge_sort`
+
+Esempio di funzionamento
+![Alt text](mergesort_pic.jpg)
