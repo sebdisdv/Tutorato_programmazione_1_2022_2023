@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cmath>
-#include <algorithm>
+#include <algorithm> // for C++14
+//#include <numeric> // for C++17
+
 using namespace std;
 
 #define MAX 10
