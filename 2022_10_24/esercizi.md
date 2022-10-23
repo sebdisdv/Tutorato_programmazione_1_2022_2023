@@ -48,7 +48,7 @@ Scrivere un programma che permetta all'utente attraverso un piccolo menù che pr
 
 ## Esercizio 2
 
-Scrivere un programma che data una matrice, utilizzi l'algoritmo "*BubbleSort*" per ordinare im numeri all'interno di ogni riga e le righe per valore medio.
+Scrivere un programma che data una matrice, utilizzi l'algoritmo "*BubbleSort*" per ordinare i numeri all'interno di ogni riga e le righe per valore medio.
    - Generare la matrice con numeri random da 1 a 100
    - Stampare la matrice ad ogni passaggio con il valore medio alla fine di ogni riga:
       - Dopo la generazione
