@@ -23,6 +23,7 @@ Scrivere un programma che ritorni gli indici di riga e colonna del massimo conte
 ### Esercizio 0.3
 Scrivere un programma che calcoli il prodotto tra due matrici quadrate inizializzate randomicamente con valori tra `[0, 10]` e lo stampi a video
 
+<div style="page-break-after: always"></div>
 
 ## Esercizio 1
 
@@ -42,6 +43,8 @@ Scrivere un programma che permetta all'utente attraverso un piccolo menù che pr
 ### Note
 - Controllare che le righe inserite in ingresso siano valide, ovvero nell'intervallo `[0, ROW]`
 - vi potrebbe tornare utile una delle implementazioni del Massimo Comun Divisore dai laboratori precedenti
+
+<div style="page-break-after: always"></div>
 
 ## Esercizio 2
 
@@ -69,6 +72,8 @@ Matrice ordinata
 5       82      99      Media: 62
 53      65      79      Media: 65
 ```
+
+<div style="page-break-after: always"></div>
 
 ## Esercizio 3
 Implementare l'algoritmo di ordinamento `merge_sort`
