@@ -5,9 +5,8 @@
 
 using namespace std;
 
-#define MAX 10
-#define MIN 1
-
+const int MAX = 10;
+const int MIN = 1;
 const int COL = 3;
 const int ROW = 3;
 

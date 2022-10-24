@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 
-#define DIM 5
-#define MAX 10
-#define MIN 0
+const int DIM = 5;
+const int MAX = 10;
+const int MIN = 0;
 
 void prod_matr(int m1[][DIM], int m2[][DIM], int res[][DIM]) {
     for (int i = 0; i < DIM; i++) {

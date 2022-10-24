@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 
-#define MAX 99
-#define MIN 0
-#define MAX_LENGTH 20
+const int MAX = 99;
+const int MIN = 0;
+const int MAX_LENGTH = 20;
 
 void merge(int vec[], int l, int m, int r)
 {
