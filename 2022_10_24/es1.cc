@@ -87,11 +87,6 @@ void print_menu(){
     cout << "'d' -> subtrack rows" << endl;
 }
 
-ostream& operator << (ostream& os, int* v){
-    os << v[0] << "/" << v[1];
-    return os;
-}
-
 int main(){
     srand(time(NULL));
     int m[ROW][COL][2];
