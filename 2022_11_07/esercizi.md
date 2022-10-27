@@ -11,10 +11,16 @@ Scrivere un programma che stampi a video il numero di occorrenze di ciascun cara
 - una variabile di tipo `char` può essere castata a `...` 
 ### Note
 - È possibile leggere il file di testo una sola volta!
-- Controllare che il file esista e terminare il programma con un messaggio d'errore in caso (usare `exit()` e `cerr`)
+- Controllare che il file esista e terminare il programma con un messaggio d'errore in caso contrario (usare `exit()` e `cerr`)
 
 ## Esercizio 2
-Scrivere un programma che prenda in ingresso un file di testo passatoli da terminale contenente una lista di parole e stampi a video la parola e se quest'ultima è palindroma o meno. La funzione di controllo deve essere ricorsiva.
+Scrivere un programma che prenda in ingresso un file di testo passatogli da terminale contenente una lista di parole, stampi a video la parola e dica se quest'ultima è palindroma o meno. La funzione di controllo deve essere **ricorsiva**.
+
+### Hint
+Una parola **palindroma** anche se letta al contrario non varia:
+- Radar
+- Otto
+- etc...
 
 ### Note
  - è possibile usare la funzione `strlen`, inclusa in `<cstring>`,  per ottenere la lunghezza delle stringhe in input
@@ -23,7 +29,7 @@ Scrivere un programma che prenda in ingresso un file di testo passatoli da termi
  - - Esistenza del file di testo
 
 ## Esercizio 3
-Scrivere un programma che prenda in ingresso due file di testo (input e output). Il file di output dovrà contenere le stesse parole del file di input, ma dovranno essere censurate, sostituendo tutte le lettere in maiuscolo con '`*`'. La procedura di censura di una stringa dovrà essere ricorsiva(tanto per cambiare).
+Scrivere un programma che prenda in ingresso due file di testo (input e output). Il file di output dovrà contenere le stesse parole del file di input, ma dovranno essere "censurate" sostituendo tutte le lettere in maiuscolo con '`*`'. La procedura di censura di una stringa dovrà essere **ricorsiva** (tanto per cambiare).
 
 ### Note
  - è possibile usare la funzione `strlen` e `isupper`, incluse in `<cstring>`
@@ -35,7 +41,7 @@ Scrivere un programma che prenda in ingresso due file di testo (input e output).
 
 ## Esercizio 4
 
-Dato in ingresso un array di interi dall'utente (dovrà essere allocato dinamicamente, chiedendo la lunghezza all'utente), scrivere una funzione `filter`, ovviamente ricorsiva, la quale ritorna un array contenente solo gli elementi pari contenuti nell'array in input.
+Dato in ingresso un array di interi dall'utente (dovrà essere allocato dinamicamente, chiedendo la lunghezza all'utente), scrivere una funzione `filter`, ovviamente **ricorsiva**, la quale ritorna un array contenente solo gli elementi pari contenuti nell'array in input.
 
 ### Firma delle funzioni da scrivere 
 - `int* filter(int*, int, int&)`
@@ -45,6 +51,6 @@ Dato in ingresso un array di interi dall'utente (dovrà essere allocato dinamica
 Dato in ingresso le dimensioni di una matrice di interi, scrivere una funzione che restituisca la matrice trasposta.
 
 ### Note
-- Ricordarsi di deallocare!
+- Ricordarsi di **deallocare**!
 - La matrice deve essere inizializzata con valori random tra `[0,10]`
-- La funzione che calcola la trasposta non deve essere ricorsiva
+- La funzione che calcola la trasposta **non** deve essere ricorsiva
