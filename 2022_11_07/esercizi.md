@@ -8,7 +8,7 @@ Scrivere un programma che stampi a video il numero di occorrenze di ciascun cara
 
 ### Hint
 - Quanti elementi ha la tabella ASCII?
-- una variabile di tipo `char` può essere castata a `...` 
+- Una variabile di tipo `char` può essere castata a `...` 
 ### Note
 - È possibile leggere il file di testo una sola volta!
 - Controllare che il file esista e terminare il programma con un messaggio d'errore in caso (usare `exit()` e `cerr`)
@@ -17,7 +17,7 @@ Scrivere un programma che stampi a video il numero di occorrenze di ciascun cara
 Scrivere un programma che prenda in ingresso un file di testo passatoli da terminale contenente una lista di parole e stampi a video la parola e se quest'ultima è palindroma o meno. La funzione di controllo deve essere ricorsiva.
 
 ### Note
- - è possibile usare la funzione `strlen`, inclusa in `<cstring>`,  per ottenere la lunghezza delle stringhe in input
+ - È possibile usare la funzione `strlen`, inclusa in `<cstring>`,  per ottenere la lunghezza delle stringhe in input
  - Fare tutti i controlli del caso
  - - Numero di argomenti in input 
  - - Esistenza del file di testo
@@ -26,7 +26,7 @@ Scrivere un programma che prenda in ingresso un file di testo passatoli da termi
 Scrivere un programma che prenda in ingresso due file di testo (input e output). Il file di output dovrà contenere le stesse parole del file di input, ma dovranno essere censurate, sostituendo tutte le lettere in maiuscolo con '`*`'. La procedura di censura di una stringa dovrà essere ricorsiva(tanto per cambiare).
 
 ### Note
- - è possibile usare la funzione `strlen` e `isupper`, incluse in `<cstring>`
+ - È possibile usare la funzione `strlen` e `isupper`, incluse in `<cstring>`
  - Fare tutti i controlli del caso
  - - Numero di argomenti in input 
  - - Esistenza del file di testo
