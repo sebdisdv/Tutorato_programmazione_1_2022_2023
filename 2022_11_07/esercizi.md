@@ -18,15 +18,17 @@ Scrivere un programma che prenda in ingresso un file di testo passatogli da term
 
 ### Hint
 Una parola **palindroma** anche se letta al contrario non varia:
-- Radar
-- Otto
+- radar
+- otto
 - etc...
 
 ### Note
  - È possibile usare la funzione `strlen`, inclusa in `<cstring>`,  per ottenere la lunghezza delle stringhe in input
  - Fare tutti i controlli del caso
  - - Numero di argomenti in input 
- - - Esistenza del file di testo
+ - - Esistenza del file di 
+ 
+<div style="page-break-after: always"></div>
 
 ## Esercizio 3
 Scrivere un programma che prenda in ingresso due file di testo (input e output). Il file di output dovrà contenere le stesse parole del file di input, ma dovranno essere "censurate" sostituendo tutte le lettere in maiuscolo con '`*`'. La procedura di censura di una stringa dovrà essere **ricorsiva** (tanto per cambiare).
