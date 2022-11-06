@@ -3,7 +3,9 @@
 using namespace std;
 
 int main(){
+    
     ifstream in ("input.txt");
+    
     int count[256] = {};
     char c;
 

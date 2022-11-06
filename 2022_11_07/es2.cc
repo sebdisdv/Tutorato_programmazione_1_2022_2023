@@ -18,13 +18,14 @@ bool is_palindroma(char str[]){
 
 int main(int argc, const char* argv[]){
     
+    ifstream in (argv[1]);
+    char str[32];
+
     if(argc != 2){
         cerr << "File non passato in input\n";
         exit(1);
     }
     
-    ifstream in (argv[1]);
-    char str[32];
 
     if(in.fail()){
         cerr << "Errore nell'apertura del file\n";

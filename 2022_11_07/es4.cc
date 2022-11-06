@@ -25,25 +25,35 @@ int* filter(int* v, int v_len, int& res_len){
 }
 
 void print_array(int* v, int len){
-    cout << len << endl;
+    cout << "Length: " << len << endl;
     for(int i = 0; i < len; i++){
         cout << v[i] << " ";
+    }
+    if(len == 0){
+        cout << "Empty!";
     }
     cout << endl;
 }
 
 int main(){
     int* v;
-    int v_len;
-    cout << "Numero di elementi da inserire: ";
-    cin >> v_len;
+    int v_len = 0;
+    
+    do{
+        cout << "Numero di elementi da inserire: ";
+        cin >> v_len;
+    } while  (v_len <= 0);
+
     v = new int[v_len];
+    
     for(int i = 0; i < v_len; i++){
         cout << "v[" << i << "] = ";
         cin >> v[i]; 
     }
+    
     int res_len;
     int* res = filter(v, v_len, res_len);
+    
     print_array(res, res_len);
 
     delete[] res, v;
