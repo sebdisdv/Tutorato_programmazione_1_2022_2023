@@ -49,6 +49,7 @@ int main() {
 
     print_list(l);
 
+    delete l;
     return 0;
 }
 
@@ -81,7 +82,7 @@ void insert_ordered(node* &l, person p) {
         l = tmp;
     } else {
         tmp = l;
-        while(tmp->next != NULL && p.age > tmp->p.age) {
+        while(tmp->next != NULL && p.age > tmp->next->p.age) {
             tmp = tmp->next;
         }
         s = new node;

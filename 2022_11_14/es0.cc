@@ -61,9 +61,9 @@ void compute_line(point p1, point p2) {
         print_point(p1);
         print_point(p2);
     } else if (p1.x == p2.x){
-        cout << "y = " << p1.y << endl;
-    }else if (p1.y == p2.y){
         cout << "x = " << p1.x << endl;
+    }else if (p1.y == p2.y){
+        cout << "y = " << p1.y << endl;
     } else {
         w = (p1.y - p2.y) / (p1.x - p2.x);
         b = p1.y - w * p1.x;
