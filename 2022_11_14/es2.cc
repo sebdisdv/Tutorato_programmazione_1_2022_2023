@@ -25,12 +25,13 @@ void print_person(person p);
 node* init_node(person p, node* next);
 void insert_ordered(node* &l, person p);
 void print_list(node* l);
+void delete_list(node* &l);
 
 int main() {
     char name[35];
     int age;
     person p;
-    node* l;
+    node* l = NULL;
 
     cout << "Inserire nome e età: ";
     cin >> name >> age;
@@ -49,7 +50,8 @@ int main() {
 
     print_list(l);
 
-    delete l;
+    delete_list(l);
+    print_list(l);
     return 0;
 }
 
@@ -93,10 +95,23 @@ void insert_ordered(node* &l, person p) {
 }
 
 void print_list(node* l) {
-    cout << "[";
-    for (l; l != NULL; l = l->next) {
-        print_person(l->p);
-        if (l->next != NULL) cout << ", ";
+    if (l != NULL) {
+        cout << "[";
+        for (l; l != NULL; l = l->next) {
+            print_person(l->p);
+            if (l->next != NULL) cout << ", ";
+        }
+        cout << "]" << endl;
     }
-    cout << "]" << endl;
+}
+
+void delete_list(node* &l) {
+    node* tmp = l;
+    while(l != NULL) {
+        cout << tmp->p.age << endl;
+        tmp = l->next;
+        delete l;
+        l = tmp;
+    }
+    l = NULL;
 }
