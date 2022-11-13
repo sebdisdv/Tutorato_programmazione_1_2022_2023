@@ -1,12 +1,12 @@
 // Costruire una classe punto (x ,y)
 // Implementare le seguenti funzioni
-// - inizzializza punto
+// - inizializza punto
 // - stampa punto
 // - calcola retta tra due punti: stampare la retta nel formato y = wx + b dove w e b 
 //                                sono valori che devono essere calcolati partendo dai due punti
 //                                se i due punti sono uguali ritornare errore
-//                                se y1 = y2 stampare nel formato x = w
-//                                se x1 = x2 stampare nel formato y = w
+//                                se y1 = y2 stampare nel formato y = w
+//                                se x1 = x2 stampare nel formato x = w
 
 #include <iostream>
 
