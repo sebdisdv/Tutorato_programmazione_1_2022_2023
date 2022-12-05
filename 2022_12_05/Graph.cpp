@@ -7,9 +7,12 @@
 
 void init(graph &g, int number_of_nodes) {
     g.number_of_nodes = number_of_nodes;
+    // Alloco una matrice number_of_nodes x number_of_nodes
     g.adjMatrix = new int *[number_of_nodes];
     for (int i = 0; i < number_of_nodes; i++) {
         g.adjMatrix[i] = new int[number_of_nodes];
+        // Setto ogni entry a 0
+        // questo perché se una entry è 0 allora l'arco i->j non esiste.
         for (int j = 0; j < number_of_nodes; j++) {
             g.adjMatrix[i][j] = 0;
         }
@@ -26,9 +29,12 @@ void fill_graph(graph &g, const char *file_path) {
     int number_nodes;
     in >> number_nodes;
 
+    // Creo un grafo vuoto di dimensione number_of_nodes x number_of_nodes
     init(g, number_nodes);
 
     int node1, node2;
+    // setto a 1 la entry corrispondente all'arco node1->node2
+    // così facendo faccio si che si crei il suddetto arco
     while (in >> node1 >> node2) {
         g.adjMatrix[node1][node2] = 1;
     }
@@ -80,16 +86,20 @@ int find_index(set &s, const int value) {
 
 void expand(set &s) {
     cout << "\nExpanding set" << endl;
+    // Alloco un nuovo array dell'attuale dimesione del set * il fattore di espansione
     int *new_array_list = new int[(int) (s.buffer_length * s.EXPANSION_FACTOR)];
+    // Copio il vecchio array in quello nuovo
     for (int i = 0; i < s.current_size; i++) {
         new_array_list[i] = s.arrayList[i];
     }
     delete[] s.arrayList;
     s.arrayList = new_array_list;
+    // Aggiorno la dimensione massima del set
     s.buffer_length = (int) (s.buffer_length * s.EXPANSION_FACTOR);
 };
 
 void shrink(set &s){
+    // Analogo all'expansion ma dimezzando la lunghezza massima
     cout << "\nShrinking set" << endl;
     int *new_array_list = new int[(int) (s.buffer_length / 2)];
     for (int i = 0; i < s.current_size; i++) {
@@ -102,30 +112,43 @@ void shrink(set &s){
 
 void insert(set &s, int value) {
     if (empty(s)){
+        // Se vuoto inserisco l'elemento e
+        // incremento il numero di elementi al suo interno 
         s.arrayList[0] = value;
         s.current_size++;
     } else {
+        // Per definizione, se un elemento è già presente nel set
+        // questo non viene reinserito
         if (!contains(s, value)) {
+            // Se il set è pieno lo espando
             if (full(s)) {
                 expand(s);
             }
+            // Trovo l'indice in cui inserire l'elemento
             int index = find_index(s, value);
             s.current_size++;
+            // Faccio scorrere tutti gli elementi dopo l'indice trovato
+            // a destra
             for (int i = s.current_size; i > index; i--) {
                 s.arrayList[i] = s.arrayList[i-1];
             }
+            // Inserirsco l'elemento
             s.arrayList[index] = value;
         }
     }
 }
 
 void remove_element(set &s, int value){
+    // Se l'elemento è presente
     if (contains(s, value)){
+        // Trovo la sua posizione
         int index = find_index(s, value);
         s.current_size--;
+        // Faccio scorrere, gli elementi dall'indice trovato in poi, a sinistra
         for(int i = index; i < s.current_size ; i++){
             s.arrayList[i] = s.arrayList[i + 1];
         }
+        // Se la dimensione è sotto la soglia di LOAD, dimezzo la dimansione
         if ((float) s.current_size / s.buffer_length < s.LOAD){
             shrink(s);
         }
@@ -175,8 +198,8 @@ void dependences(graph &g, int node) {
     stack<int> st;
     st.push(node);
     while(!st.empty()){
-        int curr_node = st.top();
-        st.pop();
+        int curr_node = st.top(); //(primo elemento dello stack)
+        st.pop(); // Rimuovo il primo elemento dallo stack
         if (!contains(s, curr_node)) {
             for (int i = 0; i < g.number_of_nodes; i++) {
                 if (g.adjMatrix[curr_node][i] && !contains(s, i)) {
