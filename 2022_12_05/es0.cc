@@ -12,7 +12,9 @@ struct stack{
 void init(stack &s, int dim);
 bool push(stack &s, int val);
 bool first(stack &s, int& ret);
+bool last(stack &s, int& ret);
 bool pop(stack &s);
+bool pop_last(stack &s);
 void dealloc(stack &s);
 
 int main() {
@@ -26,8 +28,10 @@ int main() {
 
     int f;
     cout << first(s, f) << " " << f << endl;
-    cout << pop(s) << endl;
+    cout << last(s, f) << " " << f << endl;
+    cout << pop_last(s) << endl;
     cout << first(s, f) << " " << f << endl;
+    cout << last(s, f) << " " << f << endl;
 
     cout << push(s, 3) << endl;
     cout << first(s, f) << " " << f << endl;
@@ -55,10 +59,20 @@ bool push(stack &s, int val) {
     return result;
 }
 
-bool first(stack &s, int& ret) {
+bool first(stack &s, int &ret) {
     bool result = true;
     if (s.curr_size > 0){
         ret = s.buffer[(s.head - 1 + s.max_size) % s.max_size];
+    } else {
+        result = false;
+    }
+    return result;
+}
+
+bool last(stack &s, int &ret) {
+    bool result = true;
+    if (s.curr_size > 0){
+        ret = s.buffer[(s.head - s.curr_size + s.max_size) % s.max_size];
     } else {
         result = false;
     }
@@ -69,6 +83,16 @@ bool pop(stack &s) {
     bool result = true;
     if (s.curr_size > 0) {
         s.head = (s.head - 1 + s.max_size) % s.max_size;
+        s.curr_size--;
+    } else {
+        result = false;
+    }
+    return result;
+}
+
+bool pop_last(stack &s) {
+    bool result = true;
+    if (s.curr_size > 0) {
         s.curr_size--;
     } else {
         result = false;
