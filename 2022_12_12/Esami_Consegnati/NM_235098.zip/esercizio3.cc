@@ -90,7 +90,7 @@ list * estrai(list* dipendenti, list* entrate, list* uscite){
     int ext=0;
     int n=0;
     list * estratti=new list;
-    estratti->code=0;
+    estratti->code=0; // Ok
     estratti->next=NULL;
     list * temp_dipendenti=dipendenti;
     while (temp_dipendenti!=NULL){
@@ -114,6 +114,8 @@ list * estrai(list* dipendenti, list* entrate, list* uscite){
             if (estratti->code==0){
                 estratti->code=n;
             } else {
+                // Ok potevi inserire in testa per semplicità
+                // ma va bene
                 list * temp_estratti=estratti;
                 while (temp_estratti->next!=NULL){
                     temp_estratti=temp_estratti->next;
@@ -147,3 +149,9 @@ void delete_list(list * del){
 }
 
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: Estrai ok. Potevi usare una funzione per calcolare la somma
+evitando così di scrivere due volte lo stesso codice.
+Delete ok.
+*/

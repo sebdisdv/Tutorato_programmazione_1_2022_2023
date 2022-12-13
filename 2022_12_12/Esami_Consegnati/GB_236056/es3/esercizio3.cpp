@@ -129,3 +129,9 @@ void delete_list(list* l) {
 }
 
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: estrai va sempre in segmentation fault se si cambia il seed,
+per questo ti ho assegnato 0 punti.
+Delete ok.
+*/

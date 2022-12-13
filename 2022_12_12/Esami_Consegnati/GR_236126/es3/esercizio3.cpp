@@ -80,6 +80,9 @@ int main() {
 
 // Inserire qui sotto la definizione della funzione estrai
 // FILL HERE
+
+// Con alcuni seed va in segmentation fault,
+// Prova con il seed 1670943862
 list * estrai(list * dipendenti, list * entrate, list * uscite){
     list * estratti;
     list * start;
@@ -112,7 +115,11 @@ list * estrai(list * dipendenti, list * entrate, list * uscite){
           start = estratti;
           first = false;
         }
-        estratti = estratti->next;
+        estratti = estratti->next; // qua sbagli, facendo così
+                                   // ritorni sempre e solo il primo
+                                   // elemento, se c'è, altrimenti
+                                   // ti va in segmentatino fault
+                                   // perché non hai inizializzato start.
       }
       dipendenti = dipendenti->next;
     }
@@ -134,3 +141,10 @@ void delete_list(list * l){
   }
 }
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: La logica di estrai c'è però non hai gestito bene l'inizializzazione
+e di conseguenza in alcuni casi va in segmentation fault. Ti dò metà punteggio 
+per questa.
+Delete ok.
+*/

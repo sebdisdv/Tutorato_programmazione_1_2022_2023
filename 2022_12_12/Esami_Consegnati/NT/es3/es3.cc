@@ -101,7 +101,8 @@ list * estrai(list * dipendenti, list * entrate, list * uscite) {
         int n_uscite = check_times(d, uscite);
         if (n_entrate == n_uscite) {
             list * t = new list;
-            t->code = d->code;
+            t->code = d->code; 
+            // Manca t->next = NULL
             if (first == NULL) first = t;
             else if (current == NULL) {
                 first->next = t;
@@ -129,3 +130,9 @@ void delete_list(list * l) {
 }
 
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: Estrai non hai messo t->next a NULL, non ti dà problemi però è
+buona prassi farlo.
+Delete ok.
+*/

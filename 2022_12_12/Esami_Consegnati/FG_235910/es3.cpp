@@ -100,7 +100,9 @@ list *estrai(list *dipendenti, list *entrate, list *uscite) {
             //std::cout << tutti[i]->matricola << std::endl;
             if (out) {
                 //std::cout << "oraaaa" << std::endl;
-
+                
+                // Facendo così ritorni al massimo un solo elemento
+                // Infatti eseguendo il tuo codice ritorna 0/1 elementi
                 out->next = new list;
                 out = out->next;
                 out->next = nullptr;
@@ -135,6 +137,14 @@ void delete_list(list *&head) {
         delete temp;
     }
 }
+
+/*
+COMMENTO: Estrai è overengineered, poteva essere fatta con molto meno effort,
+comunque non è un problema. Quello che non và è la gestione della lista out.
+La logica c'è ma la funzione non ritorna quello che dovrebbe, 
+ti dò la metà dei punti.
+Delete ok.
+*/
 
 // Inserire qui sopra la dichiarazione della funzione delete_list
 

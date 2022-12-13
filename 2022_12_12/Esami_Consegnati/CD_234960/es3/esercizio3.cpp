@@ -82,6 +82,7 @@ int main() {
 // FILL HERE
 list * estrai(list * dipendenti, list * entrate, list * uscite)
 {
+  // Bastava la variabile head e check però ok.
   list * head = NULL;
   list * last;
   list * tmp_dipendenti = dipendenti;
@@ -95,6 +96,8 @@ list * estrai(list * dipendenti, list * entrate, list * uscite)
     tmp_entrate = entrate;
     tmp_uscite = uscite;
 
+    // Consiglio: potevi fare una funzione conta così evitavi di scrivere
+    // il codice 2 volte. Comunque va bene.
     while (tmp_entrate != NULL) // "Conta" entrate
     {
       if(tmp_entrate->code == tmp_dipendenti->code)
@@ -141,6 +144,12 @@ void delete_list(list * l)
   {
     delete_list(l->next);
   }
-  delete l;
+  delete l; // Occhio che se l è null all'ingresso della funzione
+            // fai la delete di un qualcosa null.
 }
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: Estrai ok, cerca di evitare di utilizzare variabili che non servono.
+Delete ok.
+*/

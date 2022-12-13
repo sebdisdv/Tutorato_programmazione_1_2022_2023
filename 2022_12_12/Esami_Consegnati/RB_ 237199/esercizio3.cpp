@@ -127,3 +127,8 @@ void delete_list(list * l){
 }
 
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: Ok. Potevi usare una funzione per calcolare le entrate e uscite
+senza ripetere il codice, ma va bene.
+*/

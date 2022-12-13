@@ -183,3 +183,7 @@ void insertTail(list*& head, int value){
 		tail -> next = newNode;
 	}
 }
+
+/*
+COMMENTO: Ok. Potevi inserire direttamente in testa per risparmiare tempo.
+*/

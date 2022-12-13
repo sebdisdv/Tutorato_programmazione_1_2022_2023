@@ -128,3 +128,8 @@ void delete_list(list * & l){
     }
 }
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: Ok. Potevi usare una funzione per calcolarti le somme senza
+riscrivere lo stesso codice due volte.
+*/

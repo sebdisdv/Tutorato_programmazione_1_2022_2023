@@ -94,6 +94,15 @@ list *estrai(list *dipendenti, list *entrate, list *uscite){
         new_list->code = dipendenti->code;
         new_list->next = NULL;
       }else{
+        /*
+        Questa porzione è sbagliata.
+        Istanzi una nuova lista in next, assegni new_list a new_list (non ha effetto)
+        a quel punto sovrascrivi la testa della lista con dipendenti->code
+        e setti a null il next lasciando memoria allocata.
+
+        Questo perché al posto di fare new_list = new_list->next hai fatto
+        new_list=new_list
+        */
         new_list->next = new list;
         new_list = new_list;
         new_list->code = dipendenti->code;
@@ -104,6 +113,9 @@ list *estrai(list *dipendenti, list *entrate, list *uscite){
     dipendenti = dipendenti->next;
   }
 
+  // ptr non è inizializzato a NULL pertanto se non c'è nessun
+  // dipendente da stampare, va in segmentation faul.
+  // Prova con il seed 1670945765
   return ptr;
 }
 
@@ -132,3 +144,10 @@ void delete_list(list *l){
   }
 }
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: La logica di estrai è corretta ma ritorna al massimo un elemento
+e nel caso in cui non ce ne siano si rompe perché manca l'inizializzazione.
+Ti dò metà punti su questa.
+Delete ok.
+*/

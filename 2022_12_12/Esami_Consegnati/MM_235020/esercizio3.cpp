@@ -170,3 +170,9 @@ void delete_list(list* l){
 }
 
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: Ok. È un po' overengineered, la soluzione era deciamente più
+corta. Non è un problema ma all'esame perdi più tempo se scrivi soluzioni
+articolate.
+*/
