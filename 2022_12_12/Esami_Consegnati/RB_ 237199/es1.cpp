@@ -16,12 +16,12 @@ int main(int argc, char const *argv[])
 
     fstream in, out; 
     in.open(argv[1], ios::in);
-    out.open(argv[2], ios::app);
-    if(!in.is_open()){
+    out.open(argv[2], ios::app); // andava usato ios::out
+    if(!in.is_open()){ // andava usato in.fail()
         cerr << "Errore di apertura del file di input" << endl; 
         exit(2);
     }
-    if(!out.is_open()){
+    if(!out.is_open()){ // andava usato out.fail()
         cerr << "Errore di apertura del file di output" << endl; 
         exit(2);
     }
@@ -32,7 +32,7 @@ int main(int argc, char const *argv[])
     int righe_db = 0; 
 
     while (in >> buffer){
-        if(buffer[0] == '\0'){
+        if(buffer[0] == '\0'){ // non serve 
             break;
         }
 

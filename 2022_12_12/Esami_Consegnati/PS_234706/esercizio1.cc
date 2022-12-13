@@ -27,7 +27,7 @@ int main(int argc, char *argv[]){
     }
 
     char buffer[101];
-    char out[100][101];
+    char out[100][101]; // assumi che il numero massimo di stringhe nel file di unput sia 100, quando è il numero di stringhe uniche ad essere 100
     char unicit[100][101];
     int i=0;
     do{
@@ -44,7 +44,7 @@ int main(int argc, char *argv[]){
         int cont=0;
         bool unicita=true;
         for(int k=0; k<i; k++){
-            if(!strcmp(out[j],out[k])){
+            if(!strcmp(out[j],out[k])){ // occhio che strcmp() ritorna zero quando le due stringhe sono uguali e non un booleano!, questo ti causa alcuni problemi
                 for(int n=0; n<ind;n++){
                     if(!strcmp(unicit[n],out[k])){
                         unicita=false;

@@ -4,7 +4,10 @@
 
 using namespace std;
 
-const int MAX_LENGHT = 100;
+const int MAX_LENGHT = 100; // non era permesso l'uso di variabili globali, ma visto che è una constante si può sorvolare
+
+// La soluzione che hai proposto va bene, anche se leggere per ogni parola l'intero file di testo è un po' uno spreco di tempo
+// si poteva risolvere leggendolo solo una volta, ma non lo conto come errore
 
 bool is_valid(const char *string);
 bool contains(char **strings, const char *string);
@@ -55,7 +58,7 @@ int main(int argc, char *argv[]){
     }
 
     output.close();
-
+    // manca la deallocazione di strings!
     return 0;
 }
 

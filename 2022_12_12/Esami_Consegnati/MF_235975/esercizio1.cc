@@ -35,7 +35,8 @@ int main(int argc, char * argv []) {
   output.open(argv[2], ios::out);
   
   if (input.fail() || output.fail()) {
-    cout << "Errore nell'apertura degli stream!" << endl;
+    cout << "Errore nell'apertura degli stream!" << endl; // usare cerr
+    // manca exit()
   }
   
     char buff[100] = {};
@@ -58,7 +59,7 @@ int main(int argc, char * argv []) {
     }
 
     for(int i=0; i<validFound; i++){
-        cout<<valid[i]<<": "<<validNumber[i]<<endl;
+        cout<<valid[i]<<": "<<validNumber[i]<<endl; // non li stai scrivendo nel file di output
     }
 
 

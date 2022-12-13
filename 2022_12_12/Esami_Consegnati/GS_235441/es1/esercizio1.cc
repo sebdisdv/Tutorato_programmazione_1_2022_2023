@@ -26,11 +26,12 @@ bool Check(char s[]) {
 int main(int argc, char **argv)  {
 	
 	if (argc != 3) {
-		cout << "usage: ./a.out <input.txt> <output.txt>";
-		return -1;
+		cout << "usage: ./a.out <input.txt> <output.txt>"; // usare cerr
+		return -1; // usare exit()
 	}
 	ifstream input(argv[1]);
 	ofstream output(argv[2]);
+	// Non apri gli stream !
 	if (input.fail() || output.fail()) {
 		cout << "Error opening files";
 		return -1;

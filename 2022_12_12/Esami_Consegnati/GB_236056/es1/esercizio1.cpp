@@ -4,11 +4,13 @@
 
 bool isValid(const char* str);
 
+// Perfetto!
+
 int main(int argc, char* argv[])
 {
     if(argc != 3) {
         std::cerr << "Numero di parametri non valido!" << std::endl;
-        return -1;
+        return -1; // usare exit
     }
 
     std::fstream ifs;
@@ -24,7 +26,7 @@ int main(int argc, char* argv[])
 
     if(ofs.fail()) {
         std::cerr << "File di output non scrivibile!" << std::endl;
-        ifs.close();
+        ifs.close(); // non necessario
         return -1;
     }
 
@@ -69,7 +71,7 @@ int main(int argc, char* argv[])
 bool isValid(const char* str) {
     bool ret = true;
 
-    for(int i = 0; str[i] != '\0'; ++i) {
+    for(int i = 0; str[i] != '\0'; ++i) { // potevi anche ciclare da i = 0 a i = strlen(str), visto che era permesso l'uso della funzione
         if(str[i] < 'a' || str[i] > 'z') {
             ret = false;
         }

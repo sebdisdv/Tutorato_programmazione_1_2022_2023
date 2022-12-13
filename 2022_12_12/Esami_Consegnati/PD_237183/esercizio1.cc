@@ -11,7 +11,7 @@ int getIndexOf(char*[], int, char*);
 
 int main(int argc, char* argv[]){
     if (argc != 3){
-        cout << "Usage: ./a.out <inputFile> <outputFile>" << endl;
+        cout << "Usage: ./a.out <inputFile> <outputFile>" << endl; // usare cerr
         exit(1);   
     }
 

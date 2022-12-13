@@ -9,7 +9,7 @@ int isPresent(char[][100], char*, int);
 
 int main(int argc, char* argv[]){
     if(argc != 3){
-        cout << "Errore numero parametri" << endl;
+        cout << "Errore numero parametri" << endl; // usare cerr
         exit(-1);
     }
     fstream in;

@@ -3,6 +3,8 @@
 #include "cstring"
 
 using namespace std;
+
+// per convenzione un nome di tipo che inizia col la lettera maiuscola è riservato per le classi e non per le struct, ma non è un errore 
 struct Parola {
     char p[101];
     unsigned int n;
@@ -31,16 +33,17 @@ void insert(const char parola[101], Parola all[100], unsigned int &parole) {
     parole++;
 }
 
+// io qui terrei argc e argv come nomi degli argomenti del main
 int main(int n, char *s[]) {
     if (n != 3) {
-        cout << "Input errato" << endl;
-        return 1;
+        cout << "Input errato" << endl; // usare cerr per stampare a video gli errori
+        return 1; // usare exit() quando il programma deve terminare per un errore
     }
     fstream out(s[2], ios::out);
     fstream in(s[1], ios::in);
     if (out.fail() || in.fail()) {
-        cout << "Errore con file" << endl;
-        return 1;
+        cout << "Errore con file" << endl; // vedi sopra
+        return 1; // vedi sopra
     }
 
     Parola all[100];
@@ -53,7 +56,7 @@ int main(int n, char *s[]) {
             insert(temp, all, parole_uniche);
         }
     }
-    bool first = true;
+    bool first = true; // non capisco a cosa serva questa variabile
     for (int i = 0; i < parole_uniche; i++) {
         if (first) {
             first = false;
@@ -62,6 +65,9 @@ int main(int n, char *s[]) {
         }
         out << all[i].p << ": " << all[i].n;
     }
+
+
+    // Ti sei dimenticato di chiudere gli stream di input e output!
 
     return 0;
 }

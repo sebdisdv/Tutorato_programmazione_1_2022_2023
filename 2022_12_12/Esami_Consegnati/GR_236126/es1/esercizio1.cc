@@ -19,9 +19,12 @@ int n_of_occurrencies(stringa arr[], int DIM, char e[])
     return retval;
 }
 
+// L'esercizio di per sè è corretto ma assumi che in input ci siano al massino 100 stringhe! quando nella consegna è specificato che sono le stringhe "uniche" ad essere al massimo 100
+
+
 int main(int argc, char * argv[]){
     if(argc != 3){
-        cout << "Usage : ./a.out input.txt output.txt";
+        cout << "Usage : ./a.out input.txt output.txt"; // usare cerr
         exit(0);
     }
 
@@ -51,7 +54,7 @@ int main(int argc, char * argv[]){
         }
 
         // controllo già presente
-        for(int j = 0; j < 100; j++){
+        for(int j = 0; j < 100; j++){ // viene fatto anche per le stringhe non valide!
             if(strcmp(str[j].s, buffer) == 0){
                 valid = false;
             }

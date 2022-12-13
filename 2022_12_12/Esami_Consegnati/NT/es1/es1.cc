@@ -26,7 +26,7 @@ int main(int argc, char ** argv) {
     const int DIM = 100;
     
     if (argc != 3) {
-        cout << "Numero di argomenti non valido" << endl;
+        cout << "Numero di argomenti non valido" << endl; // usare cerr
         exit(1);
     }
     fstream fi, fo;

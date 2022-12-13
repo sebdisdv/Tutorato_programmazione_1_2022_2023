@@ -22,7 +22,7 @@ bool isValida(char * stringa){
 int main(int argc, char * argv[]){
 
     if(argc != 3){
-        cout << "Errore: numero parametri sbagliato" << endl;
+        cout << "Errore: numero parametri sbagliato" << endl; // usare cerr
         exit(1);
     }
 
@@ -75,5 +75,5 @@ int main(int argc, char * argv[]){
     in.close();
     out.close();
 
-
+    // manca return 0
 }

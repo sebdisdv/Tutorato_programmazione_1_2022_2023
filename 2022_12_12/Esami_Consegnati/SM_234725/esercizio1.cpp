@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
     if (argc != 3) {
         cerr<<"Numero di argomenti non valido"<<endl;
         cerr<<"Uso: <file_input> <file_output>"<<endl;
-        return -1;
+        return -1; // usare exit()
     }
 
 
@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
     in.open(argv[1], ios::in);
     if (in.fail()) {
         cerr<<"Errore nell'apertura della stream di input"<<endl;
-        in.close();
+        in.close();// non serve
         return -1;
     }
 
@@ -39,8 +39,8 @@ int main(int argc, char* argv[]) {
     out.open(argv[2], ios::out);
     if (out.fail()) {
         cerr<<"Errore nell'apertura della stream di output"<<endl;
-        in.close();
-        out.close();
+        in.close(); // ok
+        out.close(); // non serve
         return -1;
     }
 
@@ -49,7 +49,7 @@ int main(int argc, char* argv[]) {
     int presenza[100];
     int i = 0;
 
-    while (in>>parole[i]) {
+    while (in>>parole[i]) { // occhio che le stringhe potrebbero essere più di 100! sono quelle uniche a essere massimo 100
         if (check(parole[i])) {
             presenza[i] = 1;
             i++;
@@ -59,7 +59,7 @@ int main(int argc, char* argv[]) {
     //parsa
     for (int k = 0; k < i; k++) {
         for (int q = 0; q < k; q++) {
-            if (!strcmp(parole[k], parole[q]) && strcmp(parole[q], "")) {
+            if (!strcmp(parole[k], parole[q]) && strcmp(parole[q], "")) { // strcmp() ritorna 0 se le due stringhe sono uguali e non True attento!
                 presenza[q] += presenza[k];
                 strcpy(parole[k], "");
             }
@@ -69,7 +69,7 @@ int main(int argc, char* argv[]) {
 
     //stampa
     for (int k = 0; k < i; k++) {
-        if (strcmp(parole[k], "")) {
+        if (strcmp(parole[k], "")) { // qui ad esempio non funziona correttamente
             out<<parole[k]<<": "<<presenza[k]<<endl;
         }
     }

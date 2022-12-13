@@ -4,6 +4,8 @@
 
 using namespace std;
 
+// Perfetto!
+
 void inserisci(char m[100][100], char * buffer, int * occorrenze, int &dim);
 bool controllo(char * buffer);
 
@@ -20,7 +22,7 @@ int main(int argc, char ** argv){
     output.open(argv[2], ios::out);
 
     if(input.fail() || output.fail()){
-        cout << "file non aperti" << endl;
+        cout << "file non aperti" << endl; // usare cerr
         exit(2);
     }
 

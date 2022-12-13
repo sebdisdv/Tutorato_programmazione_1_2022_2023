@@ -3,6 +3,8 @@
 #include <cstring>
 using namespace std;
 
+// Peccato per l'assunzione sul numero di stringhe nel file di testo in input, perchè la logica era corretta
+
 bool is_upper(char * s){
     bool res =true;
     for (int i=0; s[i]!='\0'; i++){
@@ -14,7 +16,7 @@ bool is_upper(char * s){
 }
 
 void remove(char * s){
-    strcpy(s, "0000");
+    strcpy(s, "0000"); 
 }
 
 int search(char m[][101], char *s, int i){
@@ -55,7 +57,7 @@ int main(int argc, char ** argv){
 
     while ( in>>buffer){
         if (is_upper(buffer)){
-            strcpy(support[i], buffer);
+            strcpy(support[i], buffer); // occhio che le stringhe uniche potevano essere massimo 100, non il numero delle loro occorrenze, per questo l'esercizio perde 3 punti
             i++;
         }
     }

@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc,char** argv) {
     if(argc!=3){
-        cout << "USAGE <input> <output>";
+        cout << "USAGE <input> <output>"; //usare cerr
         exit(1);
     }
     fstream in,out;
@@ -18,7 +18,7 @@ int main(int argc,char** argv) {
     out.open(argv[2],ios::out);
     if(out.fail()){
         cout << "IMPOSSIBILE APRIRE IL FILE DI OUTPUT";
-        in.close();
+        in.close(); 
         exit(1);
     }
     char words[100][101]; // 100 is the max patterns and 101 is the max len of a word (+\0)
