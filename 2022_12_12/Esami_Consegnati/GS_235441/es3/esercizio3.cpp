@@ -125,6 +125,9 @@ list * estrai(list * dipendenti, list * entrate, list * uscite) {
 				l = new_list;
 			}
 			else {
+				// Facendo così ritorni sempre il primo e l'ultimo ma mai
+				// quelli in mezzo, prova con seed 1670944643
+				// Vedrai che l'output non è corretto
 				l->next = new_list;
 			}
 		}
@@ -151,3 +154,9 @@ void delete_list(list * l) {
 }
 
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: Estrai ritorna solo il primo e l'ultimo elemento. La logica c'è
+ma la funzione non ritorna quello che dovrebbe. Ti dò la metà dei punti.
+Delete ok.
+*/

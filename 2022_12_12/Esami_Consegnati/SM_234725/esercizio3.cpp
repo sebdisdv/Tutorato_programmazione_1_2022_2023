@@ -122,7 +122,7 @@ list* estrai(list* dipendenti, list* entrate, list* uscite) {
 
 // Inserire qui sotto la definizione della funzione delete_list
 void delete_list(list* l) {
-  list* del = l;
+  list* del = l; // bastava l ma ok
 
   while (del != NULL) {
     list* next = del->next;
@@ -131,3 +131,11 @@ void delete_list(list* l) {
   }
 }
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: Potevi usare una funzione per calcolarti le somme/sottrazioni 
+evitando di scrivere lo stesso codice due volte.
+Inoltre avresti potuto inserire il code direttamente in testa alla lista
+invece che in coda.
+Comunque Ok.
+*/

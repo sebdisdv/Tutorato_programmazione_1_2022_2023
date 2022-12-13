@@ -118,3 +118,7 @@ void delete_list(list * lista){
 }
 
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: Ok
+*/

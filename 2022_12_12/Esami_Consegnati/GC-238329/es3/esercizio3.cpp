@@ -85,6 +85,8 @@ list * estrai(list * dipendenti, list * entrate, list * uscite){
 
     for( ; dipendenti != NULL; dipendenti = dipendenti->next){
 
+        // Potevi creare una funzione per calcolare la somma
+        // comunque ok
         int n_entrate = 0;
         for(list * entrate_aux = entrate ; entrate_aux != NULL; entrate_aux = entrate_aux->next){
             if(dipendenti->code == entrate_aux->code){
@@ -125,3 +127,7 @@ void delete_list(list * eliminare){
 
     return;
 }
+
+/*
+COMMENTO: Ok
+*/

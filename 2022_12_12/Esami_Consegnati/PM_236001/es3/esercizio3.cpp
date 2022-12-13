@@ -109,3 +109,8 @@ void delete_list(list* l){
 }
 
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: Delete ok. Estrai non compila. Per l'esame ti consigliamo di consegnare
+solo codice che funziona perché potresti prendere comunque dei punti.
+*/

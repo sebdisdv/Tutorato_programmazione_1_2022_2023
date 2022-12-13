@@ -128,3 +128,8 @@ void delete_list(list* list){
   delete list;
 }
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: Tutto ok. Potevi fare una funzione per calcolare le somme ma
+va bene.
+*/

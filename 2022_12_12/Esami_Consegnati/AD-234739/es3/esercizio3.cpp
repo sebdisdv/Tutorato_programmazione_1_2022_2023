@@ -80,14 +80,18 @@ int main() {
 
 // Inserire qui sotto la definizione della funzione estrai
 // FILL HERE
+// Il codice in alcune esecuzioni va in segmentaiton fault
+// In tutte le liste in cui iteri, salti sempre l'ultimo elemento
 list* estrai(list *dipendenti, list *entrate, list *uscite) {
 
   list *estratti = new list;
   list *ptr = estratti;
 
   for (;dipendenti->next != NULL; dipendenti = dipendenti->next) {
-    list *estratti = new list;
-
+    list *estratti = new list; // estratti l'hai già allocata
+                               // stai allocando nuova memoria
+                               // senza mai usarla e senza deallocarla
+    std::cout << dipendenti->code << " ";
     int entrate_count = 0;
     int uscite_count = 0;
 
@@ -106,8 +110,10 @@ list* estrai(list *dipendenti, list *entrate, list *uscite) {
     }
 
   }
-
-  return estratti->next;
+  return estratti->next; // Dovresti ritornare estratti
+                         // Comunque non hai inizializzato estratti a NULL
+                         // Quindi quando è vuoto si rompe
+                         // Prova ad eseguirlo con il seed 1670930643
 }
 // Inserire qui sopra la definizione della funzione estrai
 
@@ -117,6 +123,12 @@ list* estrai(list *dipendenti, list *entrate, list *uscite) {
 
 void delete_list(list *l) {
   if (l->next != NULL) delete_list(l->next);
-  delete l;
+  delete l; // se l == NULL lo elimini anche se non serve
 }
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: La funzione estrai non è di per se sbagliata però ci sono alcune cose
+che non vanno e in alcuni casi fa segmentation fault. Ho deciso di darti metà punteggio.
+Sulla delete ti do il massimo anche se è imprecisa.
+*/

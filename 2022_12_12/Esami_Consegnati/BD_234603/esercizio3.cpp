@@ -154,3 +154,9 @@ void delete_list(list *&lista)
 }
 
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: Non compila, sono 0 punti.
+All'esame cerca di inviare codice che compila anche se incompleto,
+può essere che ti vengano attribuiti alcuni punti.
+*/
