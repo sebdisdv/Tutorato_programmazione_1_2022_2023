@@ -142,6 +142,10 @@ list *estrai(list *const dip, list *const in, list *const out)
       res_aux = new list;
       res_aux->code = dip_aux->code;
       res_aux->next = NULL;
+      
+      // Aggiungi solo un elemento a res e basta,
+      // infatti ti ritorna solo il primo elemento della lista dipendenti
+      // prova con il seed 1670944643, vedrai che l'output è sbagliato
       if (NULL == res)
       {
         res = res_aux;
@@ -174,3 +178,9 @@ void delete_list(list *&l)
 }
 
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: La logica di estrai è corretta ma la lista in output non sempre.
+Per questo ti dò la metà dei punti.
+Delete ok.
+*/

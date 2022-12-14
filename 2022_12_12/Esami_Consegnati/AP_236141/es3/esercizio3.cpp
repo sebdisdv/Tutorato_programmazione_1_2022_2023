@@ -111,3 +111,9 @@ void delete_list(list*& head){
 	}
 }
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: Non compila, il punteggio è 0. All'esame manda codice che compila
+che potresti prendere qualche punto. In questo caso la delete era corretta
+e ti avrei dato 2 punti.
+*/

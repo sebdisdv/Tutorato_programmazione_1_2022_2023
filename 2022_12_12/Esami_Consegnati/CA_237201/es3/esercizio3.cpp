@@ -125,3 +125,8 @@ void delete_list(list * lista){
   }
 }
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: Estrai ok.
+Delete dealloca solo il primo elemento. Su questa ti dò 0 punti.
+*/

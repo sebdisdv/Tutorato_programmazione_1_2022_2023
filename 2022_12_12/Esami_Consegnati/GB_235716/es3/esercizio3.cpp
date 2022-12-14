@@ -130,3 +130,10 @@ void delete_list( list *&  s) {
 
 
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: ok. Potevi usare una funzione per calcolare le somme e scrivere
+solo una volta il codice. Un altro consiglio che posso darti è che potevi
+inserire in testa alla lista invece che in coda (più semplice e veloce da
+scrivere).
+*/

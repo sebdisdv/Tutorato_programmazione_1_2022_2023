@@ -104,6 +104,13 @@ void delete_list(list *l) {
     if (l != NULL) {
         delete_list(l->next);
     }
-    delete l;
+    delete l; // occhio che se l == NULL all'ingresso della funzione 
+              // fai un delete anche se l == NULL, non è un grosso errore
+              // però occhio la prossima volta
 }
 // Inserire qui sopra la definizione della funzione delete_list
+
+/*
+COMMENTO: Estrai ok.
+Delete occhio al caso l==NULL.
+*/
