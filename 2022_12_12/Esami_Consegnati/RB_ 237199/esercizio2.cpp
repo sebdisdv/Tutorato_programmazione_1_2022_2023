@@ -35,8 +35,10 @@ int main(int argc, char ** argv) {
 
 
 // Add hereafter the definition of compute_sum
+//Corretto
 int compute_sum(int num){
-  if(sum(num) < 10){
+  //metti il risultato di sum(num) dentro a una variabile per evitare di chiamare tante volte una funzione ricorsiva
+  if(sum(num) < 10){ 
     return sum(num);
   }
   else if(sum(num)%2 == 0){
@@ -47,6 +49,7 @@ int compute_sum(int num){
   }
 }
 
+//Corretto
 int sum(int n){
   if(n >= 0 && n < 10){
     return n;

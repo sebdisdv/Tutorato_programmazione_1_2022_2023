@@ -33,11 +33,12 @@ int main(int argc, char ** argv) {
 
 
 // Add hereafter the definition of compute_sum
-
+//Corretto
 int compute_sum(int num) {
     return compute_sum_aux(num, 0);
 }
 
+//Corretto
 int compute_sum_aux(int num, int res) {
     if (num < 10) {
         res += num;

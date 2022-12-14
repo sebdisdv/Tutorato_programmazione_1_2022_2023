@@ -35,17 +35,19 @@ int main(int argc, char ** argv) {
 
 
 // Add hereafter the definition of compute_sum
+//Corretto
 int compute_sum(int num){
     int ris = 0;
     return compute_sum_aux(num, ris);
 }
 
+//Corretto
 int compute_sum_aux(int num, int ris){
     int ultima_cifra = num % 10;
 
 
     // se ho ragginto l'ultima cifra
-    if((num - ultima_cifra) == 0){
+    if((num - ultima_cifra) == 0){ //bastava anche "num < 10"
         ris += num; // ris diventa la somma cercata
         if(ris < 10){
             return ris;

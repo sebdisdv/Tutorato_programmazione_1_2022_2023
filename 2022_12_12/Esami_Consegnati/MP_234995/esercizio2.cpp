@@ -34,6 +34,7 @@ int main(int argc, char ** argv) {
 
 
 // Add hereafter the definition of compute_sum
+//Corretto
 int sommacifre(int n, int res){
   if(n/10 == 0){
     return res+n;
@@ -50,10 +51,18 @@ int compute_sum_help(int n){
     return compute_sum_help(s);
   }else{
     int s = sommacifre(n+1, 0);
+    /*
+    qui dovevi fare return di compute_sum_help(s), immagino sia una svista
+    con il numero 99999992 ritorna 12, ma dovrebbe ritornare 4:
+    -> 9+9+9+9+9+9+9+2 = 65 maggiore di 10 e dispari quindi sommo 1 
+    -> 6+6 = 12 maggiore di 10 e pari quindi sommo 10 
+    -> 2+2 = 4 minore di 10 quindi ritorno 4
+    */
     return s;
   }
 }
 
+//Corretto
 int compute_sum(int n){
   int s = sommacifre(n, 0);
   if (s/10 == 0){

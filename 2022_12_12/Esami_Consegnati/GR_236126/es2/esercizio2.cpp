@@ -7,6 +7,7 @@ using namespace std;
 int compute_sum(int num);
 // Add here above the declaration of compute_sum
 
+//Corretto
 int rec_somma_cifre(int N)
 {
     if (N / 10 == 0)
@@ -43,8 +44,16 @@ int main(int argc, char ** argv) {
 
 // Add hereafter the definition of compute_sum
 int compute_sum(int num){
-  if(rec_somma_cifre(num) < 10) return rec_somma_cifre(num);
-  else if(num % 2 == 0) return compute_sum(rec_somma_cifre(num) + 10);
-  else return compute_sum(rec_somma_cifre(num) + 1);
+  /*
+    meglio salvare il risultato di rec_somma_cifre in una variabile 
+    per evitare di chiamare una funzione ricorsiva tante volte
+  */
+  if(rec_somma_cifre(num) < 10) 
+    return rec_somma_cifre(num); 
+  //il controllo non è da fare su "num", ma sulla somma delle cifre di num
+  else if(num % 2 == 0) 
+    return compute_sum(rec_somma_cifre(num) + 10);
+  else 
+    return compute_sum(rec_somma_cifre(num) + 1);
 }
 // Add here above the definition of compute_sum

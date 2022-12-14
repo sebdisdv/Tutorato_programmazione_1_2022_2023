@@ -61,6 +61,11 @@ int compute_sum(int n) {
   } else {
     compute_sum(sumdigits + 1);
   }
+  /*
+    leggere meglio i warning del compilatore, 
+    questa funzione non sempre ritorna un intero, a volte finisce la sua esecuzione senza tornare nulla.
+    esecuzione con 129 non corretta ad esempio
+  */
 }
 
 

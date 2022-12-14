@@ -44,6 +44,7 @@ int main(int argc, char **argv)
 
 // Add hereafter the definition of compute_sum
 
+//Corretto
 int compute_sum(int n)
 {
   // if (n < 0)
@@ -64,6 +65,7 @@ int compute_sum(int n)
 }
 // Add here above the definition of compute_sum
 
+//Corretto
 int sum(int n)
 {
   if (n < 10) {

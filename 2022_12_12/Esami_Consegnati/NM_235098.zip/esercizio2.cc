@@ -4,6 +4,10 @@
 using namespace std;
 
 // Add hereafter the declaration of compute_sum
+// non era esplicitamente specificata la firma del metodo, 
+// ma per come viene chiamata nel main, compute_sum ha un solo parametro
+// 9.99 perchè hai cambiato la firma, potevi usare una funzione ausiliaria. 
+//Attenzione che in alcuni esercizi è esplicitamente chiesto di non cambiare la firma
 int compute_sum(int num, int sum=0);
 // Add here above the declaration of compute_sum
 
@@ -34,6 +38,7 @@ int main(int argc, char ** argv) {
 
 
 // Add hereafter the definition of compute_sum
+//OK
 int compute_sum(int num, int sum){
     if (num==0){
         if (sum<10){

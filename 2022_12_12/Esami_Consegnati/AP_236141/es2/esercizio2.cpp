@@ -35,6 +35,7 @@ int main(int argc, char ** argv) {
 
 
 // Add hereafter the definition of compute_sum
+//Corretto
 int compute_sum(int n){
   int somma = sum(n);
   if(somma<10){
@@ -46,6 +47,7 @@ int compute_sum(int n){
   return compute_sum(somma+1);
 }
 
+//Corretto
 int sum(int n, int somma){
   if(n<10){
     return somma + n;

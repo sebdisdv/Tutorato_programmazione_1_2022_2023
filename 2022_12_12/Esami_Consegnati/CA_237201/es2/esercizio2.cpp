@@ -35,6 +35,7 @@ int main(int argc, char ** argv) {
 
 
 // Add hereafter the definition of compute_sum
+//Corretto
 int sommaCifre(int n, int tot){
   if(n/10>=1){
     tot+=n%10;
@@ -47,6 +48,7 @@ int sommaCifre(int n, int tot){
   return tot;
 }
 
+//Corretto
 int compute_sum(int n){
   int somma= sommaCifre(n,0);
   if(somma>10){

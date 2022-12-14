@@ -36,10 +36,12 @@ int main(int argc, char ** argv) {
 
 // Add hereafter the definition of compute_sum
 
+//Corretto
 int compute_sum(int num) {
 	return _compute_sum(num, 0);
 }
 
+//Corretto
 int _compute_sum(int num, int sum) {
 
 	int digit = 0;

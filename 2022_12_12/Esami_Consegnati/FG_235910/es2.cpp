@@ -3,6 +3,7 @@
 
 using namespace std;
 
+//Corretto
 int summ(int n) {
     if (n < 10) {
         return n;
@@ -12,6 +13,7 @@ int summ(int n) {
 
 // Add hereafter the declaration of compute_sum
 
+//Corretto
 int compute_sum(int num) {
     int s = summ(num);
     if (s < 10) {

@@ -56,14 +56,17 @@ int main(int argc, char ** argv) {
 // Add hereafter the definition of compute_sum
 
 int compute_sum(int x){
-    if(x<10){
-        return x;
+    if(x<10){ //Il controllo era da fare sulla somma delle cifre, non sul numero in input, per questo i risultati non sono corretti
+        return x;//return della somma delle cifre di x non di x stesso
     }
+    //Conviene mettere il risultato di "sum_digits" in una variabile per non chiamare tante volte una funzione ricorsiva
     else if(sum_digits(x)%2==0){
         return compute_sum(sum_digits(x)+10);
     }
     return compute_sum(sum_digits(x)+1);
 }
+
+//Corretto
 int sum_digits(int x){
     if(x/10==0)
         return x;

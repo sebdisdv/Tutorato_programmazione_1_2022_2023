@@ -35,12 +35,14 @@ int main(int argc, char ** argv) {
 
 
 // Add hereafter the definition of compute_sum
+//Corretto
 int digitsSum(int num){
   if (num < 10) return num;
 
   return num % 10 + digitsSum(num / 10);
 }
 
+//Corretto
 int compute_sum(int num){
   int sum = digitsSum(num);
 

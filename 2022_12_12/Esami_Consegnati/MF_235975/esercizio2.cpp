@@ -36,6 +36,7 @@ int main(int argc, char ** argv) {
 
 
 // Add hereafter the definition of compute_sum
+//Corretto
 int compute_sum(int num){
   int sum = sumDigits(num);
   if(sum<10){
@@ -50,12 +51,16 @@ int compute_sum(int num){
   return compute_sum(sum);
 }
 
+//Corretto
 int sumDigits(int num){
+  //con "num<10 --> return num" evitavi una chiamata
   if(num == 0){
     return 0;
   }
   return num % 10 + sumDigits(num/10);
 }
+
+//Ok
 bool isEven(int num){
   return !(num % 2);
 }

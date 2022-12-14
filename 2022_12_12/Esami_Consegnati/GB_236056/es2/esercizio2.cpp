@@ -36,6 +36,7 @@ int main(int argc, char ** argv) {
     cout << "The value of compute_sum(" << num << ") = " << compute_sum(num) << endl;
 }
 
+//Corretto
 int calcDigitsSum(int num) {
     if(num < 10) return num;
 
@@ -44,7 +45,7 @@ int calcDigitsSum(int num) {
 
 
 // Add hereafter the definition of compute_sum
-
+//Corretto
 int compute_sum(int num) {
     int sum = calcDigitsSum(num);
 

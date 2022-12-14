@@ -35,6 +35,7 @@ int main(int argc, char ** argv) {
 
 
 // Add hereafter the definition of compute_sum
+//Corretto
 int compute_sum(int num)
 {
   int s_cifre = somma_cifre(num);
@@ -56,6 +57,7 @@ int compute_sum(int num)
   return res;
 }
 
+//Corretto
 int somma_cifre(int num)
 {
   int res = 0;

@@ -46,11 +46,11 @@ int compute_sum ( int n )
     }
     else if ( s%2 == 0 )
     {
-        compute_sum ( s+10 );
+        compute_sum ( s+10 ); //manca un return, leggere meglio i warning del compilatore
     }
     else
     {
-        compute_sum ( s+1 );
+        compute_sum ( s+1 ); //manca un return
     }
 }
 int somma_cifre ( int n, int p )
@@ -63,7 +63,11 @@ int somma_cifre ( int n, int p )
     {
         p += n%10;
         n /= 10 ;
-        somma_cifre ( n, p );
+        somma_cifre ( n, p ); //manca un return
+        /*
+        leggere meglio i warning del compilatore, 
+        questa funzione non sempre ritorna un intero, a volte finisce la sua esecuzione senza tornare nulla
+        */
     }
 }
 

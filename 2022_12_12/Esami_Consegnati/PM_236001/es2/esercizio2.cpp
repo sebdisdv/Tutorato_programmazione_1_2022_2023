@@ -37,6 +37,7 @@ int main(int argc, char ** argv) {
 
 
 // Add hereafter the definition of compute_sum
+//Ok
 int compute_sum(int num){
   int maxesp = findEsp(num, 0);
   int somma = sum(num, maxesp, 0, 0);
@@ -52,7 +53,7 @@ int compute_sum(int num){
   return somma;
 }
 // Add here above the definition of compute_sum
-
+// non capisco le tue intenzioni, funziona ma per "fortuna"
 int sum(int num, int maxesp, int esp, int somma){
   if(esp > maxesp){
     return 0;
@@ -67,7 +68,7 @@ int sum(int num, int maxesp, int esp, int somma){
 }
 
 int pow(int b, int e){
-  if(e < 0) return 1;
+  if(e < 0) return 1; // la condizione è sbagliata, andava e==0, non calcola la potenza correttamente
   if(e == 1) return b;
   return b * pow(b, e-1);
 }

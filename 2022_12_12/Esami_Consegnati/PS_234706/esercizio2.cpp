@@ -43,7 +43,7 @@ int compute_sum(int num){
   else if(somma%2==0){
     return compute_sum(somma+10);
   }
-  else if(somma%2!=0){
+  else if(somma%2!=0){ //questo ulteriore if causa il warning
     return compute_sum(somma+1);
   }
 }
@@ -53,7 +53,8 @@ int sum(int num){
     return num;
   }
   else{
-    return sum(num%10)+sum(num/10);
+    return sum(num%10)+sum(num/10); 
+    //richiamare "sum" sul resto della divisione per 10 di num è inutile, potevi mettere direttamente num%10
   }
 }
 // Add here above the definition of compute_sum

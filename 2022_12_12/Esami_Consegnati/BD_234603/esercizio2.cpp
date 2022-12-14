@@ -46,6 +46,7 @@ int pow(int base, int powerRaised)
         return 1;
 }
 
+//funziona correttamente, ma la consegna chiedeva di non utilizzare cicli
 int compute_sum(int num)
 {
   int cifra;
@@ -54,8 +55,10 @@ int compute_sum(int num)
 
   int multiplo_10 = 1;
   int x = 0;      // x è l'esponente di 10 alla x
+
   // non era concesso utilizzare cicli, porre maggiore attenzione nella lettura della consegna
   // l'esercizio viene quindi considerato nullo
+  
   while (multiplo_10 <= num)   // calcolo del numero totale di cifre
   {
       numero_cifre++;
