@@ -28,7 +28,7 @@ int main(int argc, char ** argv) {
     char buffer[101] ;
     int occorrenze[100] = { } , j;
     bool valida , presente;
-    for (int i = 0; input >> buffer && i < 100 ; i++ ) {
+    for (int i = 0; input >> buffer && i < 100 ; i++ ) { // qui fai l'assunzione che nel file di testo ci siano al massimo 100 parole, quando sono quelle uniche ad essere al massimo 100!
         valida = true;
         for ( int k = 0; k < 101 && valida && buffer[k]!='\0'; k++) {
             //cout << " buffer: " << buffer[k] ;
@@ -40,7 +40,7 @@ int main(int argc, char ** argv) {
         if (valida) {
             presente = false;
             for (j=0; j<=i && !presente ; j++) {
-                if (strcmp(buffer, parole[j])) {
+                if (strcmp(buffer, parole[j])) { // occhio che strcmp ritorna 0 se le stringhe sono uguali e non un bool! potrebbe darti problemi imprevisti
                     presente = false;
                 } else {
                     presente = true;

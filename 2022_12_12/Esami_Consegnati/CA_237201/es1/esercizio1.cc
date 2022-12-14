@@ -8,6 +8,7 @@ struct Occorrenza{
   int nVolte;
   char stringa[101];
 };
+
 int contains(Occorrenza occorrenze[], char * buffer, int cont);
 bool controlloInput(char * buffer);
 
@@ -47,7 +48,7 @@ int main(int argc, char const *argv[]) {
         output.close();
         input.close();
       }else{
-        cout<<"Errore apertura file output!"<<endl;
+        cout<<"Errore apertura file output!"<<endl; // usare cerr
         output.close();
       }
     }else{

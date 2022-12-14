@@ -2,6 +2,8 @@
 #include <fstream>
 #include <cstring>
 
+// Perfetto, anche se non era necessario crearsi una lista concatenata, per lo sforzo questo esercizio lo valuto 11(all'esame vero viene valutato 10 e basta)
+
 struct node
 {
     char *str;
