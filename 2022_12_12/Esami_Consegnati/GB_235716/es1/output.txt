@@ -1,6 +1,0 @@
-aaa : 2
-bfe : 3
-asas : 1
-fre : 1
-pewdfs : 1
-assda : 1
