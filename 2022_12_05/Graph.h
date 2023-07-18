@@ -12,7 +12,7 @@
 using namespace std;
 
 struct graph{
-    int** adjMatrix = nullptr;
+    bool** adjMatrix = nullptr;
     int number_of_nodes = 0;
 };
 

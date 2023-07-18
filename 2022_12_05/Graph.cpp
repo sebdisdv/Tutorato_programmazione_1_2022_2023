@@ -8,9 +8,9 @@
 void init(graph &g, int number_of_nodes) {
     g.number_of_nodes = number_of_nodes;
     // Alloco una matrice number_of_nodes x number_of_nodes
-    g.adjMatrix = new int *[number_of_nodes];
+    g.adjMatrix = new bool *[number_of_nodes];
     for (int i = 0; i < number_of_nodes; i++) {
-        g.adjMatrix[i] = new int[number_of_nodes];
+        g.adjMatrix[i] = new bool[number_of_nodes];
         // Setto ogni entry a 0
         // questo perché se una entry è 0 allora l'arco i->j non esiste.
         for (int j = 0; j < number_of_nodes; j++) {
